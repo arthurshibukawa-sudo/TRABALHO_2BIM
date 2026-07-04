@@ -1,224 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MindUp - Home</title>
 
-<style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-}
+<title> MindUp - Sobre </title>
 
-/* MENU LATERAL (igual para todas as páginas) */
-nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:200px;
-    height:100vh;
-    background:#a1c9e0;
-    padding-top:40px;
-}
+<link rel="icon" type="image/png" href="imagens/Favicon.jpg">
 
-nav h2{
-    text-align:center;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-nav a{
-    display:block;
-    padding:15px;
-    color:#1e3855;
-    text-decoration:none;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-nav a:hover{
-    background:#8bb8d3;
-}
-
-/* CONTEÚDO PRINCIPAL */
-main{
-    margin-left:200px;
-}
-
-/* HEADER */
-header{
-    padding:20px;
-    text-align:center;
-}
-
-.logo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-}
-
-.logo img{
-    width:50px;
-}
-
-/* HERO */
-.hero{
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("imagens/hero.jpg");
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-
-.hero h1{
-    font-size:clamp(28px, 5vw, 60px);
-    margin:0;
-}
-
-.hero h2{
-    font-weight:normal;
-}
-
-.hero a{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 20px;
-    background:#6be9ff;
-    color:#000;
-    text-decoration:none;
-    border-radius:8px;
-}
-
-.hero a:hover{
-    background:#4dd3f0;
-}
-
-/* CARDS */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
-    gap:20px;
-    padding:40px;
-}
-
-.card{
-    background:#f4f4f4;
-    padding:20px;
-    border-radius:10px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:scale(1.03);
-    background:#e7f9ff;
-}
-
-.card h3{
-    margin-top:10px;
-}
-
-/* CITAÇÃO */
-blockquote{
-    margin:40px;
-    padding:20px;
-    border-left:5px solid #6be9ff;
-    font-style:italic;
-}
-
-/* FOOTER */
-footer{
-    background:#1e3855;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-
-footer a{
-    color:#6be9ff;
-    text-decoration:none;
-}
-</style>
+<link rel="stylesheet" href="css/estilo.css">
 
 </head>
 
-<body>
+<body class="pagina-sobre">
 
-<!-- MENU (igual em todas as páginas) -->
 <nav>
-    <h2>Menu</h2>
-    <a href="index.html">Home</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="midia.html">Mídia</a>
-    <a href="contato.html">Contato</a>
-    <a href="tema.html">Tema</a>
-    <a href="extra.html">Extra</a>
+
+    <div class="logo">
+        <img src="imagens/Favicon.jpg" alt="Logo MindUp">
+        <h1>MindUp</h1>
+    </div>
+
+    <ul>
+
+        <li><a href="index.html">Início</a></li>
+        <li><a class="ativo" href="sobre.html">Sobre</a></li>
+        <li><a href="tema.html">Tema</a></li>
+        <li><a href="midia.html">Mídia</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="extra.html">Saiba Mais</a></li>
+
+    </ul>
+
 </nav>
+
+<header>
+
+    <h2>Portal MindUp</h2>
+
+</header>
 
 <main>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-        <img src="imagens/Favicon.jpg" alt="Logo">
-        <h1>MindUp</h1>
-    </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-    <h1>Bem-vindo ao MindUp</h1>
-    <h2>Informação, consciência e impacto sobre o tema</h2>
-    <a href="tema.html">Explorar o tema</a>
-</section>
-
-<!-- CARDS -->
-<section class="cards">
-
-    <article class="card">
-        <h3> Dado 1</h3>
-        <p>Descrição curta e impactante sobre o tema.</p>
-        <a href="tema.html">Saiba mais</a>
-    </article>
-
-    <article class="card">
-        <h3> Dado 2</h3>
-        <p>Outro fato relevante e chocante sobre o assunto.</p>
-        <a href="tema.html">Saiba mais</a>
-    </article>
-
-    <article class="card">
-        <h3> Dado 3</h3>
-        <p>Mais uma informação importante para o visitante.</p>
-        <a href="tema.html">Saiba mais</a>
-    </article>
-
-</section>
-
-<!-- CITAÇÃO -->
-<section>
-    <blockquote cite="https://www.exemplo.com">
-        “A conscientização é o primeiro passo para a mudança.”
-    </blockquote>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>MindUp © 2026 - Todos os direitos reservados</p>
-
-    <p>
-        <a href="index.html">Home</a> |
-        <a href="sobre.html">Sobre</a> |
-        <a href="midia.html">Mídia</a> |
-        <a href="contato.html">Contato</a>
-    </p>
-
-    <p>
-        Dados fictícios para fins educacionais. Fonte real:
-        <a href="https://www.who.int" target="_blank">OMS</a>
-    </p>
-</footer>
+    <!-- Conteúdo da página -->
 
 </main>
+
+<footer>
+
+    <p>© 2026 MindUp</p>
+
+</footer>
 
 </body>
 </html>
