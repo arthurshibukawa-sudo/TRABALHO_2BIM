@@ -1,12 +1,88 @@
-h1
+/* =========================
+   VARIÁVEIS
+========================= */
+:root
 {
-    text-align: center;
+    --cor-principal:#4f83b5;
+    --cor-menu:#a1c9e0;
+    --cor-hover:#8bb8d3;
+    --cor-texto:#1e3855;
+    --cor-fundo:#f5f8fb;
 }
-.center
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body
 {
-    text-align: center;
-    border-radius: 50%;
-    width: 10%;
-    height: 100px;
-    margin: 20px;
+    font-family:'Poppins',sans-serif;
+    background:var(--cor-fundo);
+}
+
+/* =========================
+   MENU
+========================= */
+nav
+{
+    position:fixed;
+    left:0;
+    top:0;
+    width:220px;
+    height:100vh;
+    background:var(--cor-menu);
+    box-shadow:2px 0 10px rgba(0,0,0,.15);
+}
+
+.logo
+{
+    text-align:center;
+    padding:30px 15px;
+}
+
+.logo img
+{
+    width:70px;
+    border-radius:50%;
+}
+
+.logo h1
+{
+    color:var(--cor-texto);
+    margin-top:10px;
+}
+
+nav ul
+{
+    list-style:none;
+}
+
+nav li
+{
+    width:100%;
+}
+
+nav a
+{
+    display:block;
+    text-decoration:none;
+    color:var(--cor-texto);
+    padding:16px 20px;
+    font-weight:600;
+    transition:.3s;
+    border-left:5px solid transparent;
+}
+
+nav a:hover
+{
+    background:var(--cor-hover);
+    padding-left:30
 }
