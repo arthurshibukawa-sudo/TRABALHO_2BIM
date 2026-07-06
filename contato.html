@@ -14,12 +14,11 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- CSS --->
 <link rel="stylesheet" href="css/estilo.css">
 
 </head>
 
-<body>
+<body class="pagina-contato">
 
 <nav>
 
@@ -43,13 +42,147 @@
 
 <header>
 
-    <h2>Portal MindUp</h2>
+    <h2>Fale com o Instituto Reconecta</h2>
 
 </header>
 
 <main>
 
-    <!-- CONTEÚDO DO CONTATO -->
+    <!-- AVISO DE DADOS FICTÍCIOS -->
+    <section class="aviso-ficticio">
+        <p>
+            <strong>Atenção:</strong> todos os dados de contato desta página
+            (organização, endereço, telefone e e-mail) são fictícios, criados
+            exclusivamente para fins acadêmicos.
+        </p>
+    </section>
+
+    <!-- FORMULÁRIO E INFORMAÇÕES -->
+    <section class="secao-contato">
+
+        <!-- FORMULÁRIO -->
+        <div class="bloco-formulario">
+
+            <h3>Envie sua mensagem</h3>
+
+            <form action="#">
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000">
+                </div>
+
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento">
+                </div>
+
+                <div class="campo">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="">Selecione uma opção</option>
+                        <option value="denuncia">Denúncia</option>
+                        <option value="voluntariado">Voluntariado</option>
+                        <option value="parceria">Parceria</option>
+                        <option value="imprensa">Imprensa</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <span class="rotulo-grupo">Como você conheceu o site?</span>
+
+                    <div class="opcao-radio">
+                        <input type="radio" id="origem-redes" name="origem" value="redes-sociais">
+                        <label for="origem-redes">Redes sociais</label>
+                    </div>
+
+                    <div class="opcao-radio">
+                        <input type="radio" id="origem-amigo" name="origem" value="amigo">
+                        <label for="origem-amigo">Indicação de amigo</label>
+                    </div>
+
+                    <div class="opcao-radio">
+                        <input type="radio" id="origem-escola" name="origem" value="escola">
+                        <label for="origem-escola">Escola ou professor</label>
+                    </div>
+
+                    <div class="opcao-radio">
+                        <input type="radio" id="origem-busca" name="origem" value="busca">
+                        <label for="origem-busca">Busca no Google</label>
+                    </div>
+                </div>
+
+                <div class="campo campo-checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Quero receber novidades e conteúdos por e-mail</label>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+
+                <button type="submit">Enviar mensagem</button>
+
+            </form>
+
+        </div>
+
+        <!-- INFORMAÇÕES DE CONTATO -->
+        <div class="bloco-info">
+
+            <h3>Informações de contato</h3>
+
+            R. Antônio J Andrade, 70 
+
+            <address>
+                Instituto Reconecta<br>
+                Rua Antônio J Andrade, 70<br>
+                Rolândia - PR<br>
+                CEP: 86605-592<br>
+                Telefone: (67) 20202-0767<br>
+                E-mail: <a href="mailto:contato@institutoreconecta.org.br">contato@institutoreconecta.org.br</a>
+            </address>
+
+            <h4>Horário de atendimento</h4>
+
+            <dl class="horarios">
+                <dt>Segunda a sexta</dt>
+                <dd>00h às 23h</dd>
+
+                <dt>Sábado</dt>
+                <dd>06h às 19h</dd>
+
+                <dt>Domingo e feriados</dt>
+                <dd>Fechado</dd>
+            </dl>
+
+            <h4>Localização (referência)</h4>
+
+            <iframe
+                title="Mapa com localização de referência do Instituto Reconecta"
+                src="https://www.google.com/maps?q=Rolândia,+PR,+86600-000&output=embed"
+                width="100%"
+                height="250"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </section>
 
 </main>
 
@@ -74,12 +207,13 @@
 
     <p>
         Fonte das informações:
-        <a href="https://www.who.int/" target="_blank">
-            Organização Mundial da Saúde (OMS)
+        <a href="https://www.apa.org/" target="_blank">
+            American Psychological Association (APA)
         </a>
     </p>
 
 </footer>
+
 
 </body>
 </html>
