@@ -1,8 +1,7 @@
 /* =========================
    VARIÁVEIS
 ========================= */
-:root
-{
+:root{
     --cor-principal:#4f83b5;
     --cor-menu:#a1c9e0;
     --cor-hover:#8bb8d3;
@@ -22,8 +21,7 @@
 /* =========================
    BODY
 ========================= */
-body
-{
+body{
     font-family:'Poppins',sans-serif;
     background:var(--cor-fundo);
 }
@@ -31,8 +29,7 @@ body
 /* =========================
    MENU
 ========================= */
-nav
-{
+nav{
     position:fixed;
     left:0;
     top:0;
@@ -42,36 +39,26 @@ nav
     box-shadow:2px 0 10px rgba(0,0,0,.15);
 }
 
-.logo
-{
+.logo{
     text-align:center;
     padding:30px 15px;
 }
 
-.logo img
-{
+.logo img{
     width:70px;
     border-radius:50%;
 }
 
-.logo h1
-{
+.logo h1{
     color:var(--cor-texto);
     margin-top:10px;
 }
 
-nav ul
-{
+nav ul{
     list-style:none;
 }
 
-nav li
-{
-    width:100%;
-}
-
-nav a
-{
+nav a{
     display:block;
     text-decoration:none;
     color:var(--cor-texto);
@@ -81,8 +68,72 @@ nav a
     border-left:5px solid transparent;
 }
 
-nav a:hover
-{
+nav a:hover{
     background:var(--cor-hover);
-    padding-left:30
+    padding-left:30px;
+}
+
+nav a.ativo{
+    background:var(--cor-principal);
+    color:white;
+    border-left:5px solid white;
+}
+
+/* =========================
+   HEADER
+========================= */
+header{
+    margin-left:220px;
+    background:white;
+    padding:20px 40px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+header h2{
+    color:var(--cor-principal);
+}
+
+/* =========================
+   MAIN
+========================= */
+main{
+    margin-left:220px;
+    padding:40px;
+    min-height:70vh;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    margin-left:220px;
+    background:var(--cor-principal);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/*  conteudo do index */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cards article {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.destaque {
+    margin-top: 40px;
+    padding: 20px;
+    background: #a1c9e0;
+    border-radius: 10px;
 }
