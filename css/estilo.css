@@ -1,6 +1,21 @@
-/* =========================
-   VARIÁVEIS
-========================= */
+/* ===================================================
+   ESTILO.CSS — MINDUP — SAÚDE MENTAL ENTRE JOVENS
+   Grupo: 
+   /* ===================================================
+   ESTILO.CSS — MINDUP — SAÚDE MENTAL ENTRE JOVENS
+   Grupo:
+        Arthur Seiji Shibukawa Araujo
+        Davi Silva Nascimento
+        Julia Sophia Ferreira Francisco
+        Alexandra Lucia da Silva
+        Luis Carlos da Costa Amaral Filho
+        Kaua Hideyuki Cares Kubota
+        Matheus dos Reis Bueno Jesus Alves
+   Data: 06/07/2026
+=================================================== */
+
+
+/* === 1. VARIAVEIS GLOBAIS (TOKENS DE DESIGN) === */
 :root{
     --cor-principal:#4f83b5;
     --cor-menu:#a1c9e0;
@@ -9,27 +24,55 @@
     --cor-fundo:#f5f8fb;
 }
 
-/* =========================
-   RESET
-========================= */
-*{
+
+/* === 2. RESET E BASE === */
+*, *::before, *::after{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* =========================
-   BODY
-========================= */
+html{
+    font-size:16px;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:var(--cor-fundo);
 }
 
-/* =========================
-   MENU
-========================= */
-nav{
+
+/* === 3. TIPOGRAFIA === */
+h1, h2, h3{
+    color:var(--cor-texto);
+}
+
+
+/* === 4. COMPONENTES REUTILIZAVEIS === */
+/* botoes, cards, badges, etc. */
+.btn-cta{
+    display:inline-block;
+    background:var(--cor-principal);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    padding:14px 32px;
+    border-radius:8px;
+    border:2px solid white;
+    transition:.3s;
+}
+
+.btn-cta:hover{
+    background:white;
+    color:var(--cor-principal);
+}
+
+
+/* === 5. CABECALHO E NAVEGACAO === */
+
+/* Menu lateral - "body > nav" pega SOMENTE o nav que e filho direto
+   do body, sem afetar o nav dentro do footer */
+body > nav{
     position:fixed;
     left:0;
     top:0;
@@ -54,11 +97,11 @@ nav{
     margin-top:10px;
 }
 
-nav ul{
+body > nav ul{
     list-style:none;
 }
 
-nav a{
+body > nav a{
     display:block;
     text-decoration:none;
     color:var(--cor-texto);
@@ -68,20 +111,17 @@ nav a{
     border-left:5px solid transparent;
 }
 
-nav a:hover{
+body > nav a:hover{
     background:var(--cor-hover);
     padding-left:30px;
 }
 
-nav a.ativo{
+body > nav a.ativo{
     background:var(--cor-principal);
     color:white;
     border-left:5px solid white;
 }
 
-/* =========================
-   HEADER
-========================= */
 header{
     margin-left:220px;
     background:white;
@@ -93,18 +133,159 @@ header h2{
     color:var(--cor-principal);
 }
 
-/* =========================
-   MAIN
-========================= */
 main{
     margin-left:220px;
     padding:40px;
     min-height:70vh;
 }
 
-/* =========================
-   FOOTER
-========================= */
+
+/* === 6. HERO (PAGINA HOME) === */
+.hero{
+    position:relative;
+    min-height:320px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin-bottom:40px;
+    border-radius:12px;
+    overflow:hidden;
+    background:linear-gradient(135deg, var(--cor-principal), var(--cor-menu));
+}
+
+.hero-overlay{
+    background:rgba(0,0,0,.25);
+    width:100%;
+    height:100%;
+    padding:60px 30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero h1{
+    color:white;
+    font-size:clamp(1.8rem, 4vw + 1rem, 3rem);
+    margin-bottom:15px;
+    text-shadow:1px 2px 6px rgba(0,0,0,.4);
+}
+
+.hero p{
+    color:white;
+    max-width:600px;
+    margin-bottom:25px;
+    font-size:1.1rem;
+}
+
+
+/* === 7. PAGINA HOME === */
+
+/* Cards em grid responsivo */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.cards article{
+    position:relative;
+    background:white;
+    padding:24px 20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.cards article:hover{
+    transform:translateY(-4px);
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+}
+
+.card-numero{
+    display:inline-block;
+    background:var(--cor-menu);
+    color:var(--cor-texto);
+    font-weight:700;
+    font-size:.9rem;
+    padding:4px 12px;
+    border-radius:20px;
+    margin-bottom:12px;
+}
+
+.cards article h3{
+    color:var(--cor-texto);
+    margin-bottom:8px;
+}
+
+.cards article p{
+    color:var(--cor-texto);
+    margin-bottom:14px;
+    line-height:1.6;
+}
+
+.cards article a{
+    color:var(--cor-principal);
+    font-weight:600;
+    text-decoration:none;
+}
+
+.cards article a:hover{
+    text-decoration:underline;
+}
+
+/* Citação / blockquote */
+.citacao{
+    margin-top:40px;
+    padding:40px 30px;
+    text-align:center;
+}
+
+.citacao blockquote{
+    max-width:700px;
+    margin:0 auto;
+    font-size:1.3rem;
+    font-style:italic;
+    color:var(--cor-texto);
+    border-left:4px solid var(--cor-principal);
+    padding-left:20px;
+    text-align:left;
+}
+
+.citacao blockquote footer{
+    margin-top:12px;
+    font-size:1rem;
+    font-style:normal;
+    font-weight:600;
+    color:var(--cor-principal);
+}
+
+/* Seção de destaque */
+.destaque{
+    margin-top:40px;
+    padding:20px;
+    background:#a1c9e0;
+    border-radius:10px;
+}
+
+
+/* === 8. PAGINA SOBRE === */
+
+
+/* === 9. PAGINA TEMA === */
+
+
+/* === 10. PAGINA MIDIA === */
+
+
+/* === 11. PAGINA CONTATO === */
+
+
+/* === 12. PAGINA EXTRA === */
+
+
+/* === 13. RODAPE === */
 footer{
     margin-left:220px;
     background:var(--cor-principal);
@@ -113,27 +294,28 @@ footer{
     padding:20px;
 }
 
-/*  conteudo do index */
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
+/* Nav dentro do footer (links do rodape) -
+   estilo proprio, independente do menu lateral */
+footer nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px 20px;
+    margin:15px 0;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+footer nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
 }
 
-.cards article {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+footer nav a:hover{
+    text-decoration:underline;
 }
 
-.destaque {
-    margin-top: 40px;
-    padding: 20px;
-    background: #a1c9e0;
-    border-radius: 10px;
+
+/* === 14. RESPONSIVIDADE (MEDIA QUERIES) === */
+@media (max-width: 768px){
+
 }
