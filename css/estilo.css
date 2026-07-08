@@ -20,6 +20,7 @@
     --cor-hover:#8bb8d3;
     --cor-texto:#1e3855;
     --cor-fundo:#f5f8fb;
+    --altura-header:78px;
 }
 
 
@@ -78,6 +79,7 @@ body > nav{
     height:100vh;
     background:var(--cor-menu);
     box-shadow:2px 0 10px rgba(0,0,0,.15);
+    z-index:200;
 }
 
 .logo{
@@ -120,11 +122,23 @@ body > nav a.ativo{
     border-left:5px solid white;
 }
 
+/* Cabecalho fixo no topo (DESAFIO): position:fixed + z-index,
+   acompanhando a rolagem da pagina. left:220px evita sobrepor o
+   menu lateral, que tem z-index maior (200) para ficar por cima
+   em telas pequenas quando os dois disputam espaco. */
 header{
-    margin-left:220px;
+    position:fixed;
+    top:0;
+    left:220px;
+    right:0;
+    height:var(--altura-header);
+    margin-left:0;
     background:white;
     padding:20px 40px;
     box-shadow:0 2px 8px rgba(0,0,0,.08);
+    z-index:150;
+    display:flex;
+    align-items:center;
 }
 
 header h2{
@@ -133,6 +147,7 @@ header h2{
 
 main{
     margin-left:220px;
+    margin-top:var(--altura-header);
     padding:40px;
     min-height:70vh;
 }
@@ -313,25 +328,16 @@ main{
     box-shadow:0 6px 16px rgba(0,0,0,.12);
 }
 
-.card-membro .avatar-iniciais{
+.card-membro .avatar-foto{
     width:80px;
     height:80px;
     border-radius:50%;
     margin:0 auto 12px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-weight:700;
-    font-size:1.4rem;
-    letter-spacing:1px;
+    display:block;
+    object-fit:cover;
+    background:var(--cor-menu);
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
 }
-
-.avatar-cor1{ background:linear-gradient(135deg, var(--cor-principal), #6fa8d0); }
-.avatar-cor2{ background:linear-gradient(135deg, #7c5cbf, #a686db); }
-.avatar-cor3{ background:linear-gradient(135deg, #2e9e8f, #5fc4b6); }
-.avatar-cor4{ background:linear-gradient(135deg, #d9822b, #f0a94e); }
-.avatar-cor5{ background:linear-gradient(135deg, #c9556e, #e17f92); }
 
 .card-membro h3{
     font-size:1rem;
@@ -483,7 +489,7 @@ main{
 
 .conteudo-tema section{
     margin-bottom:40px;
-    scroll-margin-top:20px;
+    scroll-margin-top:calc(var(--altura-header) + 20px);
 }
 
 .conteudo-tema h2{
@@ -565,11 +571,13 @@ main{
     font-size:.9rem;
 }
 
-/* Aside com navegação interna */
+/* Aside com navegação interna - top compensa a altura do
+   cabeçalho fixo, senão o aside "sticky" ficaria escondido atrás
+   dele ao rolar a página */
 .aside-tema{
     grid-area:aside;
     position:sticky;
-    top:20px;
+    top:calc(var(--altura-header) + 20px);
     background:white;
     padding:20px;
     border-radius:10px;
